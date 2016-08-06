@@ -4,3 +4,4 @@
 Need to create array of images
 Need to modify photos before uploading
 Authentication
+Switch out CDN links to packages in index
