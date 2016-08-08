@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express NG2' });
+  res.render('index', { title: 'NG2 Find-A-Lens' });
 });
 
 module.exports = router;

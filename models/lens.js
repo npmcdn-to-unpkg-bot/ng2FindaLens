@@ -41,7 +41,7 @@ var LensSchema = new Schema({
     mainPicture:    {type: Schema.Types.Mixed},
     pictureTwo:     {type: Schema.Types.Mixed},
     pictureThree:     {type: Schema.Types.Mixed},
-    pictureFour:     {type: Schema.Types.Mixed},
+    pictureFour:     {type: Schema.Types.Mixed}
 });
 
 module.exports = mongoose.model('Lens', LensSchema);

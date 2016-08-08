@@ -1,0 +1,35 @@
+export class Lens {
+    brand:          string;
+    lensName:       string;
+    model:          string;
+    price:          number;
+    aperture:       string;
+    focalRange:     string;
+    filterSize:     string;
+    mount:          string;
+    stabilization:  boolean;
+    afmotor:        string;
+    zoomType:       string;
+    frontElementRotates:  boolean;
+    tripodMount:    boolean;
+    color:          string;
+    manualFocus:    boolean;
+    numberOfLenses: number;
+    numberOfGroups: number;
+    diaphragmBlades:number;
+    length:         string;
+    weight:         string;
+    announced:      string;
+    description:    string;
+    useOne:         string;
+    useTwo:         string;
+    useThree:       string;
+    useFour:        string;
+    useFive:        string;
+    useSix:         string;
+    useSeven:       string;
+    rank:           string;
+    bestUse:        string;
+    amazonLink:     string;
+    bandhLink:      string;
+}
