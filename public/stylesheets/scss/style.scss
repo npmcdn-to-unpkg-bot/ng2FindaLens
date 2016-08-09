@@ -1,6 +1,8 @@
 /// @group Variables
 $white: #FFFFFF;
 /// @group Variables
+$black: #222222;
+/// @group Variables
 $lightGray: #EFEFEF;
 /// @group Variables
 $orange: #FF6600;
@@ -43,7 +45,7 @@ html, body {
     background-color: $lightGray;
 }
 body {
-    color: $white;
+    color: $black;
     text-align: center;
     padding-top: 14px;
 //     text-shadow: 0 1px 3px rgba(0,0,0,.5);

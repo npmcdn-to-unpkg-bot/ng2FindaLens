@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,7 +32,7 @@ app.use(function(req, res, next) {
 app.use(logger('dev'));
 
 // connect to the database
-// mongoose.connect();
+mongoose.connect('mongodb://localhost/lenses');
 
 // set the static files location
 // used for requests that the frontend will make
@@ -40,6 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ROUTES FOR THE API
 // ===============================================================
 var apiRoutes = require('./routes/app');
+var lensRoutes = require('./routes/lenses');
+app.use('/api', lensRoutes);
 app.use('/', apiRoutes);
 
 // catch 404 and forward to error handler

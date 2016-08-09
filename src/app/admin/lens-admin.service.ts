@@ -12,16 +12,22 @@ export class LensAdminService {
     constructor(private _http: Http) {}
 
     getMessages() {
-        return this._http.get('/')
+        return this._http.get('/api/lenses')
             .map(response => {
-                const data = response.json().obj;
+                const data = response.json();
                 let objs: any[] = [];
-                console.log(data);
-                for (let i = 0; i < data.length; i++) {
-                    
-                }
+                // for (let i = 0; i < data.length; i++) {
+                //     let lens = new Lens(data[i].lensName, 'null', 0, 'null', 'null', 'null', 'null', false, 'null', 'null', false, false, 'null', false, 0, 0, 0, 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', data[i].brand);
+                //     console.log(lens);
+                //     objs.push(lens);
+                // }
+                
                 return data;
             })
-            .catch(error => Observable.throw(error.json()));
+            // .catch(error => Observable.throw(error.json()));
+            // .map(res => {
+            //     // console.log(res.json().obj);
+            //     res.json();
+            // });
     }
 }

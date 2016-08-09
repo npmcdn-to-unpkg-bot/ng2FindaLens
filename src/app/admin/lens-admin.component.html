@@ -9,13 +9,13 @@
 </div>
 
 <!-- LOADING MESSAGE -->
-<div class="jumbotron table-bordered table-striped" ng-show="lens.processing">
+<div class="jumbotron table-bordered table-striped" *ngIf="processing">
     <span class="glyphicon glyphicon-repeat spinner"></span>
     <p>Loading Lenses...</p>
 </div>
 
 <div class="table-responsive">
-    <table class="table table-bordered table-striped table-condensed" ng-if="lens.lenses">
+    <table class="table table-bordered table-striped table-condensed">
         <thead>
             <tr>
     <!--            <th>Lens ID</th>-->
@@ -49,8 +49,9 @@
         </thead>
         <tbody>
             <!-- LOOP OVER THE LENSES -->
-            <tr ng-repeat="info in lens.lenses">
-                <!--<td>{{ info.brand }}</td>
+            <tr *ngFor="let info of lensData">
+                
+                <td>{{ info.brand }}</td>
                 <td>{{ info.lensName }}</td>
                 <td>{{ info.model }}</td>
                 <td>{{ info.price }}</td>
@@ -86,8 +87,8 @@
                     <span ng-if="info.pictureTwo">More Images: &#9989;</span>-->
                 </td>
                 <td class="col-sm-2">
-                    <!--<a ui-sref="lensEdit({ lensId: info._id })" class="btn btn-success col-sm-12">Edit</a>
-                    <a href="#" ng-click="lens.deleteLens(info._id)" class="btn btn-danger col-sm-12">Delete</a>-->
+                    <a ui-sref="lensEdit({ lensId: info._id })" class="btn btn-success col-sm-12">Edit</a>
+                    <a href="#" ng-click="lens.deleteLens(info._id)" class="btn btn-danger col-sm-12">Delete</a>
                 </td>
             </tr>
         </tbody>

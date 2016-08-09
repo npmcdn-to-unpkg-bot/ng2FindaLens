@@ -15,7 +15,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" [routerLink]="['/main']">Find-A-Lens</a>
+                    <a class="navbar-brand" [routerLink]="['/']">Find-A-Lens</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->

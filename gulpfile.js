@@ -63,7 +63,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(appDev + '**/*.ts', ['build-ts']);
+    gulp.watch(appDev + '**/**/*.ts', ['build-ts']);
     gulp.watch(appDev + '**/**/*/*.{html,htm,css}', ['build-copy']);
 });
 
