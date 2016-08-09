@@ -4,6 +4,7 @@ import { HeaderComponent } from './common/header.component';
 import { FooterComponent } from './common/footer.component';
 import { MainComponent } from './main/main.component';
 import { LensAdminComponent } from './admin/lens-admin.component';
+import { BrandChoiceComponent } from './lens/brand-choice.component';
 
 @Component({
     moduleId: module.id,
@@ -20,7 +21,7 @@ import { LensAdminComponent } from './admin/lens-admin.component';
         <footer></footer>
     `,
     directives: [ROUTER_DIRECTIVES, HeaderComponent, FooterComponent],
-    precompile: [MainComponent, LensAdminComponent]
+    precompile: [MainComponent, LensAdminComponent, BrandChoiceComponent]
 })
 
 export class AppComponent {}

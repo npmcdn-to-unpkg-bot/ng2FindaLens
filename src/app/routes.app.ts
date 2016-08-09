@@ -2,11 +2,13 @@ import {provideRouter, RouterConfig} from '@angular/router';
 
 import { MainComponent } from './main/main.component';
 import { LensAdminComponent } from './admin/lens-admin.component';
+import { BrandChoiceComponent } from './lens/brand-choice.component';
 
 export const routes: RouterConfig = [
     { path: '', component: MainComponent },
     { path: 'main', component: MainComponent },
-    { path: 'lens-admin', component: LensAdminComponent }
+    { path: 'lens-admin', component: LensAdminComponent },
+    { path: 'camera-choice', component: BrandChoiceComponent }
     // { 
     //     path: 'auth', 
     //     component: AuthenticationComponent,

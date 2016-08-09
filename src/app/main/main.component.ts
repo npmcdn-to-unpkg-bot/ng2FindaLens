@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
     moduleId: module.id,
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
         <div class="jumbotron ">
             <div class="container">
                 <h1 class="cover-heading">Find-A-Lens new home page</h1>
-                <a ui-sref="brands" class="">Choose your camera brand</a>
+                <a [routerLink]="['/camera-choice']" class="btn btn-default">
+                    <span class="glyphicon glyphicon-check"></span>
+                    Choose your camera Brand
+                </a>
             </div>
         </div> <!-- end jumbotron -->
 
@@ -22,7 +26,8 @@ import { Component, OnInit } from '@angular/core';
         <section id="intro3" style="height: 400px; background-color: #145a80;">
             <h2>Intro3</h2>
         </section>
-    `
+    `,
+    directives: [ROUTER_DIRECTIVES]
 })
 export class MainComponent implements OnInit {
     constructor() { }
