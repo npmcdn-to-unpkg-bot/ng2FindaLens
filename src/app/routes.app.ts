@@ -8,7 +8,9 @@ export const routes: RouterConfig = [
     { path: '', component: MainComponent },
     { path: 'main', component: MainComponent },
     { path: 'lens-admin', component: LensAdminComponent },
-    { path: 'camera-choice', component: BrandChoiceComponent }
+    { path: 'camera-choice', component: BrandChoiceComponent },
+    { path: 'photo-style/:brand', component: PhotoStyleComponent },
+    { path: '**', component: MainComponent }
     // { 
     //     path: 'auth', 
     //     component: AuthenticationComponent,
