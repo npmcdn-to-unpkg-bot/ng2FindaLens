@@ -31,19 +31,14 @@ app.use(function(req, res, next) {
 // log all requests to the console
 app.use(logger('dev'));
 
-// connect to the database
-mongoose.connect('mongodb://localhost/lenses');
-
 // set the static files location
 // used for requests that the frontend will make
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ROUTES FOR THE API
+// ROUTES FOR THE APP
 // ===============================================================
-var apiRoutes = require('./routes/app');
-var lensRoutes = require('./routes/lenses');
-app.use('/api', lensRoutes);
-app.use('/', apiRoutes);
+var appRoutes = require('./routes/app');
+app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

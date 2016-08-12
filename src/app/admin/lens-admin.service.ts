@@ -9,9 +9,12 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class LensAdminService {
     lenses: Lens[] = [];
+    private _url = 'http://findalensapi.herokuapp.com/api';
+    private _localUrl = 'http://localhost:8000/api';
+
     constructor(private _http: Http) {}
 
-    getMessages() {
+    getStuff() {
         return this._http.get('/api/lenses')
             .map(response => {
                 const data = response.json();
@@ -29,5 +32,13 @@ export class LensAdminService {
             //     // console.log(res.json().obj);
             //     res.json();
             // });
+    }
+
+    getLenses() {
+        return this._http.get(this._localUrl + '/lenses')
+            .map(res => {
+                const data = res.json();
+                return data;
+            })
     }
 }
